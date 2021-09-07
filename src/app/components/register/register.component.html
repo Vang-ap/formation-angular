@@ -1,0 +1,17 @@
+<div>
+  <h1>Connexion</h1>
+
+  <form class="example-form" [formGroup]="registerForm" (submit)="submit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Identifiant</mat-label>
+      <input matInput formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput formControlName="password" required>
+    </mat-form-field>
+
+    <button [disabled]="!registerForm.valid" type="submit" mat-button color="primary">Valider</button>
+  </form>
+</div>

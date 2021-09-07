@@ -1,0 +1,22 @@
+<div>
+  <h1>Inscription</h1>
+
+  <form class="example-form" [formGroup]="loginForm" (submit)="submitLogin()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Identifiant</mat-label>
+      <input matInput formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput formControlName="password" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>confimer le mot de passe</mat-label>
+      <input matInput formControlName="confimPassword" required>
+    </mat-form-field>
+
+    <button [disabled]="!loginForm.valid" type="submit" mat-button color="primary">S'inscrire</button>
+  </form>
+</div>

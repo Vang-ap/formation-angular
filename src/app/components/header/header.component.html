@@ -1,0 +1,14 @@
+<div id="header">
+  <a class="logo-content" href="/">
+    <img class="logo" src="../../../assets/logo/logo-aubay.png" alt="logo Aubay">
+  </a>
+
+  <div class="menu-identification">
+    <button *ngIf="!loginService.isUserLogged()" mat-stroked-button color="warn" type="button" class="login"
+      (click)="openModalLogin()">Inscription</button>
+    <button *ngIf="!loginService.isUserLogged()" mat-stroked-button color="warn" type="button" class="inscription"
+      (click)="openDialog()">Connexion</button>
+    <button *ngIf="loginService.isUserLogged()" mat-stroked-button color="warn" type="button" class="login"
+      (click)="logout()">Deconnexion</button>
+  </div>
+</div>
