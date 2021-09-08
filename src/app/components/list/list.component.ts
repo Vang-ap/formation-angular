@@ -15,6 +15,7 @@ import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component'
 export class ListComponent implements OnInit {
   displayedColumns: string[] = ['lastname', 'firstname', 'email', 'phone', 'role', 'bu', 'supprimer'];
   dataSource!: MatTableDataSource<User>;
+  clickedRows = new Set<User>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

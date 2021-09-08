@@ -1,0 +1,55 @@
+<div class="update-user">
+  <div class="header-update-user">
+    <h1>Modifier un utilisateur</h1>
+    <button routerLink="/list" mat-stroked-button color="warn" type="button">Retour</button>
+  </div>
+
+  <form class="example-form" *ngIf="updateForm" [formGroup]="updateForm" (submit)="sendUpdateUser()">
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nom de famille</mat-label>
+        <input matInput formControlName="lastname" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input matInput formControlName="firstname" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Rôle</mat-label>
+        <input matInput formControlName="role" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Téléphone</mat-label>
+        <input matInput formControlName="phone" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Liste des Business Unit</mat-label>
+        <mat-select formControlName="bu">
+          <mat-option value="Ingénieur d’affaires">Ingénieur d’affaires</mat-option>
+          <mat-option value="Responsable du CDG">Responsable du CDG</mat-option>
+          <mat-option value="Chargée de recrutement">Chargée de recrutement</mat-option>
+          <mat-option value="Gestionnaire Administration">Gestionnaire Administration</mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="action">
+      <button [disabled]="!updateForm.valid" type="submit" mat-stroked-button color="warn">Valider</button>
+    </div>
+
+  </form>
+</div>

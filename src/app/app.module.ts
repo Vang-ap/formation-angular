@@ -25,6 +25,7 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmModalComponent } from './components/confirm-modal/confirm-modal.component';
+import { UserUpdateComponent } from './components/user-update/user-update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ConfirmModalComponent } from './components/confirm-modal/confirm-modal.
     HeaderComponent,
     ListComponent,
     CreateUserComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -22,3 +22,9 @@ table {
 .mat-icon {
   cursor: pointer;
 }
+
+.mat-row:hover {
+  background-color: rgba(255, 68, 0, 0.657);
+  color: white;
+  cursor: pointer;
+}

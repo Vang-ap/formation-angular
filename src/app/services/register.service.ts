@@ -19,7 +19,4 @@ export class RegisterService {
     return this.httpClient.post<Register>(endpointUrl, userInfo);
   }
 
-  // sendsUserInfo() {
-  //   console.log('inscription réussit');
-  // }
 }
